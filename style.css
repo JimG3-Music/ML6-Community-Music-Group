@@ -1,6 +1,30 @@
 /* =========================================================
    ML6 COMMUNITY MUSIC GROUP
-   Main Website Styling
+   ML6CMG WEBSITE
+   Black / Charcoal / Silver / Antique Gold
+   ========================================================= */
+
+:root {
+    --black: #080808;
+    --charcoal: #121212;
+    --charcoal-light: #1c1c1c;
+    --slate: #292929;
+
+    --silver: #d4d2cc;
+    --silver-dark: #9c9a94;
+
+    --gold: #b69a5b;
+    --gold-light: #d0b875;
+    --gold-dark: #806a38;
+
+    --cream: #eeeae0;
+
+    --shadow: rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================================
+   RESET
    ========================================================= */
 
 * {
@@ -14,9 +38,15 @@ html {
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: #f4f0e6;
-    color: #20251f;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    background: var(--black);
+
+    color: var(--silver);
+
     line-height: 1.7;
 }
 
@@ -38,30 +68,50 @@ img {
 .site-header {
     position: sticky;
     top: 0;
+
     z-index: 1000;
 
-    background: #18251d;
-    color: #f4f0e6;
+    background:
+        linear-gradient(
+            180deg,
+            #151515,
+            #090909
+        );
 
-    border-bottom: 3px solid #b69b5c;
+    color: var(--cream);
 
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid var(--gold-dark);
+
+    box-shadow:
+        0 5px 25px var(--shadow);
 }
 
 .header-inner {
     max-width: 1200px;
+
     margin: auto;
-    padding: 14px 25px;
+
+    padding: 15px 25px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
-    gap: 25px;
+
+    gap: 30px;
 }
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
 
 .logo {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 
     white-space: nowrap;
@@ -69,40 +119,84 @@ img {
 
 .logo strong {
     display: block;
-    font-size: 1.9rem;
-    letter-spacing: 3px;
+
+    font-size: 1.8rem;
+
+    letter-spacing: 4px;
+
+    color: var(--cream);
 }
 
 .logo small {
     display: block;
-    font-size: 0.68rem;
-    letter-spacing: 1px;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 1.5px;
+
     text-transform: uppercase;
+
+    color: var(--silver-dark);
 }
 
 .logo-mark {
-    color: #c9aa62;
-    font-size: 1.8rem;
+    color: var(--gold);
+
+    font-size: 1.7rem;
 }
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 .main-nav {
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: flex-end;
+
     gap: 18px;
 }
 
 .main-nav a {
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
+    position: relative;
 
     padding: 7px 2px;
 
-    transition: 0.25s ease;
+    color: var(--silver);
+
+    font-size: 0.9rem;
+
+    letter-spacing: 0.5px;
+
+    transition: color 0.25s ease;
+}
+
+.main-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: width 0.25s ease;
 }
 
 .main-nav a:hover {
-    color: #d1b56e;
+    color: var(--gold-light);
+}
+
+.main-nav a:hover::after {
+    width: 100%;
 }
 
 
@@ -111,69 +205,102 @@ img {
    ========================================================= */
 
 .hero {
-    min-height: 82vh;
+    min-height: 84vh;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
 
-    padding: 90px 25px;
-
-    background:
-        linear-gradient(
-            rgba(20, 31, 24, 0.86),
-            rgba(20, 31, 24, 0.92)
-        ),
-        radial-gradient(
-            circle at center,
-            #536b59 0,
-            #18251d 65%
-        );
-
-    color: #f4f0e6;
+    padding: 100px 25px;
 
     position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #303030 0%,
+            #171717 38%,
+            #080808 78%
+        );
+
+    color: var(--cream);
 }
 
-.hero::before,
-.hero::after {
-    content: "❖";
+
+/* Subtle Celtic-inspired border */
+
+.hero::before {
+    content: "";
 
     position: absolute;
 
-    color: #b69b5c;
+    top: 24px;
+    left: 5%;
+    right: 5%;
 
-    font-size: 2.5rem;
+    height: 1px;
 
-    opacity: 0.65;
-}
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold-dark),
+            var(--gold),
+            var(--gold-dark),
+            transparent
+        );
 
-.hero::before {
-    top: 35px;
-    left: 8%;
+    opacity: 0.8;
 }
 
 .hero::after {
-    bottom: 35px;
-    right: 8%;
+    content: "";
+
+    position: absolute;
+
+    bottom: 24px;
+    left: 5%;
+    right: 5%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold-dark),
+            var(--gold),
+            var(--gold-dark),
+            transparent
+        );
+
+    opacity: 0.8;
 }
 
 .hero-content {
-    max-width: 850px;
+    max-width: 900px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .eyebrow {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
 
     letter-spacing: 4px;
 
     text-transform: uppercase;
 
-    color: #c9aa62;
+    color: var(--gold-light);
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
     font-weight: bold;
 }
@@ -183,32 +310,36 @@ img {
 
     line-height: 0.95;
 
-    letter-spacing: 5px;
+    letter-spacing: 6px;
 
-    margin-bottom: 25px;
+    color: var(--cream);
 
     text-shadow:
-        2px 2px 0 rgba(0, 0, 0, 0.35);
+        0 4px 20px rgba(0, 0, 0, 0.8);
+
+    margin-bottom: 25px;
 }
 
 .hero h1 span {
     display: block;
 
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    margin-top: 20px;
+
+    font-size: clamp(1.1rem, 3vw, 1.9rem);
 
     letter-spacing: 3px;
 
-    margin-top: 18px;
-
-    color: #d7c58f;
+    color: var(--silver);
 }
 
 .hero-text {
-    max-width: 650px;
+    max-width: 680px;
 
     margin: 0 auto 35px;
 
     font-size: 1.15rem;
+
+    color: var(--silver);
 }
 
 .hero-buttons {
@@ -229,37 +360,49 @@ img {
 .button {
     display: inline-block;
 
-    padding: 13px 27px;
+    padding: 13px 28px;
 
-    border-radius: 3px;
+    border-radius: 2px;
 
     font-weight: bold;
 
     letter-spacing: 1px;
 
-    transition: 0.25s ease;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        border 0.25s ease;
 }
 
 .button-primary {
-    background: #b69b5c;
+    background: var(--gold);
 
-    color: #18251d;
+    color: #090909;
+
+    border: 1px solid var(--gold);
 }
 
 .button-primary:hover {
-    background: #d1b56e;
+    background: var(--gold-light);
+
+    border-color: var(--gold-light);
 
     transform: translateY(-2px);
 }
 
 .button-secondary {
-    border: 1px solid #c9aa62;
+    border: 1px solid var(--silver-dark);
 
-    color: #f4f0e6;
+    color: var(--silver);
 }
 
 .button-secondary:hover {
-    background: rgba(201, 170, 98, 0.15);
+    border-color: var(--gold);
+
+    color: var(--gold-light);
+
+    transform: translateY(-2px);
 }
 
 
@@ -269,6 +412,21 @@ img {
 
 .section {
     padding: 90px 25px;
+
+    background: var(--cream);
+
+    color: #242424;
+}
+
+.section-dark {
+    background:
+        linear-gradient(
+            180deg,
+            #101010,
+            #171717
+        );
+
+    color: var(--silver);
 }
 
 .section-heading {
@@ -280,17 +438,17 @@ img {
 }
 
 .section-heading h2 {
-    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-size: clamp(2rem, 5vw, 3.3rem);
 
     line-height: 1.15;
 
     margin-bottom: 18px;
 
-    color: #24362a;
+    color: #181818;
 }
 
 .section-dark .section-heading h2 {
-    color: #f4f0e6;
+    color: var(--cream);
 }
 
 .section-heading > p:not(.eyebrow) {
@@ -299,12 +457,25 @@ img {
     margin: 15px auto 0;
 }
 
+.section-dark .section-heading > p:not(.eyebrow) {
+    color: var(--silver-dark);
+}
+
+
+/* =========================================================
+   CELTIC DIVIDER
+   ========================================================= */
+
 .celtic-divider {
-    color: #b69b5c;
+    display: inline-block;
 
-    letter-spacing: 10px;
+    margin-top: 5px;
 
-    font-size: 1.1rem;
+    color: var(--gold);
+
+    font-size: 1rem;
+
+    letter-spacing: 8px;
 }
 
 
@@ -331,7 +502,7 @@ img {
 
     margin-bottom: 15px;
 
-    color: #344d39;
+    color: #252525;
 }
 
 .about-grid p {
@@ -343,9 +514,12 @@ img {
 
     text-align: center;
 
-    background: #e5decc;
+    background: #dedbd3;
 
-    border: 1px solid #b69b5c;
+    border: 1px solid #aaa59a;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
 
     position: relative;
 }
@@ -355,7 +529,7 @@ img {
 
     line-height: 0.5;
 
-    color: #b69b5c;
+    color: var(--gold);
 }
 
 .quote-card p {
@@ -363,7 +537,7 @@ img {
 
     font-weight: bold;
 
-    color: #344d39;
+    color: #252525;
 
     margin: 25px 0 10px;
 }
@@ -371,22 +545,7 @@ img {
 .quote-card span {
     font-size: 0.85rem;
 
-    color: #555;
-}
-
-
-/* =========================================================
-   DARK SECTIONS
-   ========================================================= */
-
-.section-dark {
-    background: #18251d;
-
-    color: #e8e3d8;
-}
-
-.section-dark p {
-    color: #d5d0c5;
+    color: #66635d;
 }
 
 
@@ -411,27 +570,32 @@ img {
 
     text-align: center;
 
-    background: #223328;
+    background: #1d1d1d;
 
-    border: 1px solid #8e7949;
+    border: 1px solid #444;
 
-    transition: 0.25s ease;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.25s ease,
+        border 0.25s ease;
 }
 
 .schedule-card:hover {
     transform: translateY(-5px);
 
-    border-color: #c9aa62;
+    border-color: var(--gold);
 }
 
 .schedule-icon {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 
     margin-bottom: 12px;
 }
 
 .schedule-card h3 {
-    color: #d1b56e;
+    color: var(--gold-light);
 
     font-size: 1.6rem;
 
@@ -439,18 +603,18 @@ img {
 }
 
 .schedule-card .time {
-    font-size: 1.05rem;
+    color: var(--silver);
 
     margin-bottom: 15px;
 }
 
 .schedule-card .time strong {
-    color: #f4e4b7;
+    color: var(--cream);
 }
 
 
 /* =========================================================
-   MUSICIAN TOOLKIT
+   MUSICIAN'S TOOLKIT
    ========================================================= */
 
 .toolkit-grid {
@@ -470,17 +634,22 @@ img {
 
     padding: 35px;
 
-    background: #e5decc;
+    background: #dedbd3;
 
-    border: 1px solid #b69b5c;
+    border: 1px solid #aaa59a;
 
-    transition: 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        border 0.25s ease,
+        background 0.25s ease;
 }
 
 .tool-card:hover {
     transform: translateY(-5px);
 
-    background: #eee8d9;
+    border-color: var(--gold);
+
+    background: #e8e5de;
 }
 
 .tool-icon {
@@ -494,17 +663,19 @@ img {
 .tool-card h3 {
     font-size: 1.5rem;
 
-    color: #344d39;
+    color: #242424;
 
     margin-bottom: 10px;
 }
 
 .tool-card p {
     margin-bottom: 15px;
+
+    color: #4d4b47;
 }
 
 .tool-link {
-    color: #6c582d;
+    color: #75602f;
 
     font-weight: bold;
 }
@@ -523,9 +694,9 @@ img {
 
     text-align: center;
 
-    border: 1px dashed #8e7949;
+    background: #1d1d1d;
 
-    background: #223328;
+    border: 1px dashed #70664f;
 }
 
 .gallery-symbol {
@@ -535,7 +706,7 @@ img {
 }
 
 .empty-gallery h3 {
-    color: #d1b56e;
+    color: var(--gold-light);
 
     margin-bottom: 10px;
 }
@@ -544,6 +715,8 @@ img {
     max-width: 500px;
 
     margin: auto;
+
+    color: var(--silver-dark);
 }
 
 
@@ -558,7 +731,7 @@ img {
 }
 
 .faq-list details {
-    border-bottom: 1px solid #c8c0ad;
+    border-bottom: 1px solid #bbb6ab;
 
     padding: 20px 5px;
 }
@@ -570,26 +743,29 @@ img {
 
     font-weight: bold;
 
-    color: #344d39;
+    color: #292929;
 }
 
 .faq-list details p {
     padding: 15px 25px 5px 0;
+
+    color: #55524c;
 }
 
 
 /* =========================================================
-   JOIN
+   JOIN SECTION
    ========================================================= */
 
 .join-section {
     background:
-        linear-gradient(
-            rgba(24, 37, 29, 0.96),
-            rgba(24, 37, 29, 0.96)
+        radial-gradient(
+            circle at center,
+            #292929,
+            #0b0b0b 75%
         );
 
-    color: #f4f0e6;
+    color: var(--cream);
 
     text-align: center;
 }
@@ -611,7 +787,7 @@ img {
 
     margin: 15px auto;
 
-    color: #d5d0c5;
+    color: var(--silver);
 }
 
 
@@ -624,13 +800,19 @@ img {
 
     text-align: center;
 
-    background: #d9d1bd;
+    background: #181818;
 
-    color: #24362a;
+    color: var(--silver);
+
+    border-top: 1px solid #333;
+
+    border-bottom: 1px solid #333;
 }
 
 .jimg3-link p {
     margin-bottom: 8px;
+
+    color: var(--silver-dark);
 }
 
 .jimg3-link a {
@@ -638,11 +820,13 @@ img {
 
     font-weight: bold;
 
-    color: #344d39;
+    color: var(--gold-light);
+
+    transition: color 0.25s ease;
 }
 
 .jimg3-link a:hover {
-    color: #75602f;
+    color: #eee0b3;
 }
 
 
@@ -651,9 +835,9 @@ img {
    ========================================================= */
 
 .site-footer {
-    background: #111a14;
+    background: #050505;
 
-    color: #d9d4c8;
+    color: var(--silver-dark);
 
     padding: 45px 25px 20px;
 }
@@ -671,7 +855,7 @@ img {
 }
 
 .footer-inner h3 {
-    color: #d1b56e;
+    color: var(--cream);
 
     margin-bottom: 5px;
 }
@@ -687,7 +871,7 @@ img {
 }
 
 .footer-links a:hover {
-    color: #d1b56e;
+    color: var(--gold-light);
 }
 
 .footer-bottom {
@@ -697,7 +881,7 @@ img {
 
     padding-top: 20px;
 
-    border-top: 1px solid #354136;
+    border-top: 1px solid #292929;
 
     display: flex;
 
@@ -709,12 +893,12 @@ img {
 }
 
 .footer-bottom a {
-    color: #c9aa62;
+    color: var(--gold);
 }
 
 
 /* =========================================================
-   MOBILE
+   MOBILE / TABLET
    ========================================================= */
 
 @media (max-width: 850px) {
@@ -737,7 +921,6 @@ img {
     .toolkit-grid {
         grid-template-columns: 1fr;
     }
-
 }
 
 
@@ -777,6 +960,12 @@ img {
         letter-spacing: 3px;
     }
 
+    .hero h1 span {
+        font-size: 1.05rem;
+
+        letter-spacing: 2px;
+    }
+
     .section {
         padding: 65px 20px;
     }
@@ -794,5 +983,4 @@ img {
 
         align-items: center;
     }
-
 }
