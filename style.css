@@ -982,5 +982,191 @@ img {
         text-align: center;
 
         align-items: center;
+/* =====================================================
+   MUSICIAN'S TOOLBOX
+   ===================================================== */
+
+.toolbox-grid {
+    width: min(1100px, 92%);
+    margin: 35px auto 0;
+
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 22px;
+}
+
+
+.toolbox-card {
+    position: relative;
+
+    padding: 28px 22px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(35, 35, 35, 0.98),
+            rgba(15, 15, 15, 0.98)
+        );
+
+    border: 1px solid #3c3c3c;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.toolbox-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #a58b55;
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.toolbox-featured {
+    border: 2px solid #8f7746;
+
+    background:
+        linear-gradient(
+            145deg,
+            #24221d,
+            #11100e
+        );
+}
+
+
+.toolbox-icon {
+    font-size: 2.8rem;
+
+    margin-bottom: 12px;
+}
+
+
+.toolbox-card h3 {
+    margin: 8px 0 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.4rem;
+
+    color: #e3cc95;
+}
+
+
+.toolbox-card p {
+    margin: 0 auto 20px;
+
+    max-width: 320px;
+
+    min-height: 60px;
+
+    color: #bdbdbd;
+
+    line-height: 1.6;
+
+    font-size: 0.98rem;
+}
+
+
+.toolbox-card .button {
+    display: inline-block;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   COMING SOON TOOLS
+   ===================================================== */
+
+.toolbox-coming-soon {
+    opacity: 0.72;
+}
+
+
+.toolbox-coming-soon:hover {
+    opacity: 0.9;
+}
+
+
+.tool-coming {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    padding: 7px 13px;
+
+    border: 1px solid #555;
+
+    border-radius: 6px;
+
+    color: #999;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   TOOLBOX SECTION INTRO
+   ===================================================== */
+
+#toolbox .section-heading > p:last-child {
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #aaa;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   MOBILE TOOLBOX
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .toolbox-grid {
+        width: 94%;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
     }
+
+
+    .toolbox-card {
+        padding: 25px 18px;
+    }
+
+
+    .toolbox-card h3 {
+        font-size: 1.3rem;
+    }
+
+
+    .toolbox-icon {
+        font-size: 2.5rem;
+    }
+
+}    }
 }
