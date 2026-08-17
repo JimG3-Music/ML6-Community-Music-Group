@@ -1,97 +1,66 @@
-/* =========================================================
+/* =====================================================
    ML6 COMMUNITY MUSIC GROUP
-   ML6CMG WEBSITE
-   Black / Charcoal / Silver / Antique Gold
-   ========================================================= */
-
-:root {
-    --black: #080808;
-    --charcoal: #121212;
-    --charcoal-light: #1c1c1c;
-    --slate: #292929;
-
-    --silver: #d4d2cc;
-    --silver-dark: #9c9a94;
-
-    --gold: #b69a5b;
-    --gold-light: #d0b875;
-    --gold-dark: #806a38;
-
-    --cream: #eeeae0;
-
-    --shadow: rgba(0, 0, 0, 0.55);
-}
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
+   MAIN STYLESHEET
+   ===================================================== */
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
+
+    margin: 0;
+
     font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+        Arial,
+        Helvetica,
+        sans-serif;
 
-    background: var(--black);
+    background:
+        #101010;
 
-    color: var(--silver);
+    color: #eeeeee;
 
-    line-height: 1.7;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
+    line-height: 1.6;
 }
 
 
-/* =========================================================
+/* =====================================================
    HEADER
-   ========================================================= */
+   ===================================================== */
 
 .site-header {
+
     position: sticky;
+
     top: 0;
 
     z-index: 1000;
 
     background:
-        linear-gradient(
-            180deg,
-            #151515,
-            #090909
-        );
+        rgba(10, 10, 10, 0.96);
 
-    color: var(--cream);
+    border-bottom:
+        1px solid #333;
 
-    border-bottom: 1px solid var(--gold-dark);
-
-    box-shadow:
-        0 5px 25px var(--shadow);
+    backdrop-filter:
+        blur(8px);
 }
 
+
 .header-inner {
-    max-width: 1200px;
+
+    width: min(1200px, 94%);
 
     margin: auto;
 
-    padding: 15px 25px;
+    min-height: 64px;
 
     display: flex;
 
@@ -99,1200 +68,1203 @@ img {
 
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 20px;
 }
 
 
-/* =========================================================
-   LOGO
-   ========================================================= */
+.mini-logo {
 
-.logo {
-    display: flex;
+    color: #d8c08a;
 
-    align-items: center;
+    text-decoration: none;
 
-    gap: 10px;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
 
     white-space: nowrap;
 }
 
-.logo strong {
-    display: block;
+
+.main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+.main-nav a {
+
+    color: #ccc;
+
+    text-decoration: none;
+
+    font-size: 0.86rem;
+
+    transition: color 0.2s ease;
+}
+
+
+.main-nav a:hover {
+
+    color: #d8c08a;
+}
+
+
+/* =====================================================
+   AGE NOTICE
+   ===================================================== */
+
+.age-notice {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 9px 15px;
+
+    background: #181818;
+
+    border-bottom:
+        1px solid #333;
+
+    color: #aaa;
+
+    text-align: center;
+
+    font-size: 0.85rem;
+}
+
+
+.age-notice strong {
+
+    color: #d8c08a;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #282828 0%,
+            #151515 45%,
+            #090909 100%
+        );
+}
+
+
+.hero-content {
+
+    width: min(850px, 94%);
+}
+
+
+.hero-logo {
+
+    width: min(210px, 55vw);
+
+    height: auto;
+
+    margin-bottom: 20px;
+}
+
+
+.eyebrow {
+
+    margin: 0 0 10px;
+
+    color: #d8c08a;
+
+    font-size: 0.78rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.hero h1 {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(2.2rem, 7vw, 4.5rem);
+
+    line-height: 1.1;
+
+    color: #f2f2f2;
+}
+
+
+.hero-text {
+
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    color: #bbb;
+
+    font-size: 1.1rem;
+}
+
+
+.age-badge {
+
+    display: inline-block;
+
+    margin: 5px 0 25px;
+
+    padding: 7px 14px;
+
+    border:
+        1px solid #8f7746;
+
+    border-radius: 5px;
+
+    color: #d8c08a;
+
+    font-size: 0.78rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.button {
+
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.button:hover {
+
+    transform: translateY(-2px);
+}
+
+
+.button-primary {
+
+    background: #d8c08a;
+
+    color: #111;
+}
+
+
+.button-primary:hover {
+
+    background: #edd79d;
+}
+
+
+.button-secondary {
+
+    background: transparent;
+
+    color: #ddd;
+
+    border:
+        1px solid #666;
+}
+
+
+.button-secondary:hover {
+
+    border-color: #d8c08a;
+
+    color: #d8c08a;
+}
+
+
+.hero-divider {
+
+    margin-top: 30px;
+
+    color: #8f7746;
+
+    letter-spacing: 10px;
+}
+
+
+/* =====================================================
+   GENERAL SECTIONS
+   ===================================================== */
+
+.section {
+
+    padding:
+        75px 20px;
+
+    background:
+        #151515;
+}
+
+
+.section-dark {
+
+    background:
+        #0e0e0e;
+}
+
+
+.section-heading {
+
+    width: min(800px, 94%);
+
+    margin:
+        0 auto 40px;
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(1.9rem, 5vw, 3rem);
+
+    color: #eee;
+}
+
+
+.section-heading > p:last-child {
+
+    color: #aaa;
+
+    line-height: 1.6;
+}
+
+
+.celtic-divider {
+
+    margin:
+        15px 0 20px;
+
+    color: #a58b55;
+
+    letter-spacing: 8px;
+}
+
+
+.content-narrow {
+
+    width: min(750px, 94%);
+
+    margin: auto;
+}
+
+
+.content-narrow p {
+
+    color: #bbb;
+
+    margin:
+        0 0 20px;
+}
+
+
+.center {
+
+    text-align: center;
+}
+
+
+.large-text {
+
+    font-size: 1.15rem;
+
+    color: #ddd !important;
+}
+
+
+.highlight {
+
+    padding: 18px;
+
+    border-left:
+        3px solid #a58b55;
+
+    background:
+        rgba(255,255,255,0.03);
+}
+
+
+/* =====================================================
+   INSTRUMENTS
+   ===================================================== */
+
+.instrument-columns {
+
+    width: min(950px, 94%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.instrument-group {
+
+    background: #171717;
+
+    border:
+        1px solid #333;
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+
+.instrument-group h3 {
+
+    margin-top: 0;
+
+    color: #d8c08a;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+
+.instrument-group ul {
+
+    margin: 0;
+
+    padding-left: 18px;
+
+    color: #bbb;
+}
+
+
+.instrument-note {
+
+    width: min(750px, 94%);
+
+    margin: 30px auto 0;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border:
+        1px solid #333;
+
+    border-radius: 10px;
+
+    color: #aaa;
+}
+
+
+.instrument-note strong {
+
+    color: #d8c08a;
+}
+
+
+/* =====================================================
+   FREE LEARNING
+   ===================================================== */
+
+.free-learning {
+
+    background:
+        radial-gradient(
+            circle at center,
+            #24211b,
+            #101010 65%
+        );
+
+    text-align: center;
+}
+
+
+.free-learning-content {
+
+    width: min(800px, 94%);
+
+    margin: auto;
+}
+
+
+.free-learning-content p {
+
+    color: #bbb;
+}
+
+
+.belief-statement {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.belief-statement strong {
+
+    padding: 10px 15px;
+
+    border:
+        1px solid #685a3d;
+
+    border-radius: 7px;
+
+    color: #d8c08a;
+
+    background:
+        rgba(0,0,0,0.25);
+}
+
+
+/* =====================================================
+   LESSONS
+   ===================================================== */
+
+.two-column {
+
+    width: min(850px, 94%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.info-card {
+
+    padding: 28px;
+
+    text-align: center;
+
+    background: #171717;
+
+    border:
+        1px solid #363636;
+
+    border-radius: 12px;
+}
+
+
+.big-icon {
+
+    font-size: 2.3rem;
+}
+
+
+.info-card h3 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #d8c08a;
+}
+
+
+.info-card p {
+
+    color: #aaa;
+}
+
+
+.info-card strong {
+
+    color: #eee;
+}
+
+
+.card-note {
+
+    font-size: 0.9rem;
+}
+
+
+.session-note {
+
+    width: min(800px, 94%);
+
+    margin: 25px auto 0;
+
+    text-align: center;
+
+    color: #aaa;
+}
+
+
+/* =====================================================
+   MUSICIAN'S TOOLBOX
+   ===================================================== */
+
+.toolbox-grid {
+
+    width: min(900px, 94%);
+
+    margin: 25px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(185px, 1fr));
+
+    gap: 12px;
+}
+
+
+.toolbox-card {
+
+    padding: 17px 13px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #232323,
+            #101010
+        );
+
+    border:
+        1px solid #383838;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.3);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.toolbox-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #a58b55;
+}
+
+
+.toolbox-featured {
+
+    border:
+        2px solid #8f7746;
+
+    background:
+        linear-gradient(
+            145deg,
+            #24221d,
+            #11100e
+        );
+}
+
+
+.toolbox-icon {
 
     font-size: 1.8rem;
 
-    letter-spacing: 4px;
-
-    color: var(--cream);
-}
-
-.logo small {
-    display: block;
-
-    font-size: 0.65rem;
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-
-    color: var(--silver-dark);
-}
-
-.logo-mark {
-    color: var(--gold);
-
-    font-size: 1.7rem;
+    margin-bottom: 6px;
 }
 
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
+.toolbox-card h3 {
 
-.main-nav {
+    margin: 4px 0 7px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.08rem;
+
+    line-height: 1.25;
+
+    color: #e3cc95;
+}
+
+
+.toolbox-card p {
+
+    margin:
+        0 auto 12px;
+
+    min-height: 42px;
+
+    color: #aaa;
+
+    line-height: 1.35;
+
+    font-size: 0.82rem;
+}
+
+
+.toolbox-card .button {
+
+    display: inline-block;
+
+    padding: 8px 12px;
+
+    font-size: 0.78rem;
+}
+
+
+/* =====================================================
+   COMING SOON TOOL
+   ===================================================== */
+
+.toolbox-coming-soon {
+
+    opacity: 0.78;
+}
+
+
+.tool-coming {
+
+    display: inline-block;
+
+    padding: 7px 11px;
+
+    border:
+        1px solid #66583c;
+
+    border-radius: 6px;
+
+    color: #d8c08a;
+
+    font-size: 0.68rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   GALLERY
+   ===================================================== */
+
+.empty-gallery {
+
+    width: min(650px, 94%);
+
+    margin: auto;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    border:
+        1px solid #333;
+
+    border-radius: 12px;
+
+    background: #151515;
+}
+
+
+.empty-gallery span {
+
+    font-size: 3rem;
+}
+
+
+.empty-gallery h3 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #d8c08a;
+}
+
+
+.empty-gallery p {
+
+    color: #999;
+}
+
+
+/* =====================================================
+   FAQ
+   ===================================================== */
+
+.faq-list {
+
+    width: min(800px, 94%);
+
+    margin: auto;
+}
+
+
+.faq-list details {
+
+    margin-bottom: 10px;
+
+    border:
+        1px solid #333;
+
+    border-radius: 8px;
+
+    background: #151515;
+
+    overflow: hidden;
+}
+
+
+.faq-list summary {
+
+    padding: 16px;
+
+    cursor: pointer;
+
+    color: #d8c08a;
+
+    font-weight: bold;
+}
+
+
+.faq-list details p {
+
+    margin: 0;
+
+    padding:
+        0 16px 16px;
+
+    color: #aaa;
+}
+
+
+/* =====================================================
+   JOIN
+   ===================================================== */
+
+.join-section {
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #28231a,
+            #101010 70%
+        );
+}
+
+
+.join-content {
+
+    width: min(750px, 94%);
+
+    margin: auto;
+}
+
+
+.join-content > p {
+
+    color: #bbb;
+}
+
+
+.email {
+
+    font-size: 1.1rem;
+}
+
+
+.email a {
+
+    color: #d8c08a;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   JIMG3 CONNECTION
+   ===================================================== */
+
+.jimg3-link {
+
+    padding: 25px 15px;
+
+    text-align: center;
+
+    background: #0a0a0a;
+
+    border-top:
+        1px solid #292929;
+
+    border-bottom:
+        1px solid #292929;
+}
+
+
+.jimg3-link p {
+
+    margin: 0 0 5px;
+
+    color: #777;
+}
+
+
+.jimg3-link a {
+
+    color: #d8c08a;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.site-footer {
+
+    background: #080808;
+
+    padding:
+        35px 20px 20px;
+
+    color: #888;
+}
+
+
+.footer-inner {
+
+    width: min(1100px, 94%);
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.footer-inner h3 {
+
+    margin-top: 0;
+
+    color: #d8c08a;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+
+.footer-links {
+
     display: flex;
 
     flex-wrap: wrap;
 
     justify-content: flex-end;
 
-    gap: 18px;
-}
+    gap: 10px 18px;
 
-.main-nav a {
-    position: relative;
-
-    padding: 7px 2px;
-
-    color: var(--silver);
-
-    font-size: 0.9rem;
-
-    letter-spacing: 0.5px;
-
-    transition: color 0.25s ease;
-}
-
-.main-nav a::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    width: 0;
-
-    height: 1px;
-
-    background: var(--gold);
-
-    transition: width 0.25s ease;
-}
-
-.main-nav a:hover {
-    color: var(--gold-light);
-}
-
-.main-nav a:hover::after {
-    width: 100%;
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-    min-height: 84vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 100px 25px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #303030 0%,
-            #171717 38%,
-            #080808 78%
-        );
-
-    color: var(--cream);
-}
-
-
-/* Subtle Celtic-inspired border */
-
-.hero::before {
-    content: "";
-
-    position: absolute;
-
-    top: 24px;
-    left: 5%;
-    right: 5%;
-
-    height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--gold-dark),
-            var(--gold),
-            var(--gold-dark),
-            transparent
-        );
-
-    opacity: 0.8;
-}
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    bottom: 24px;
-    left: 5%;
-    right: 5%;
-
-    height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--gold-dark),
-            var(--gold),
-            var(--gold-dark),
-            transparent
-        );
-
-    opacity: 0.8;
-}
-
-.hero-content {
-    max-width: 900px;
-
-    position: relative;
-
-    z-index: 2;
-}
-
-.eyebrow {
-    font-size: 0.75rem;
-
-    letter-spacing: 4px;
-
-    text-transform: uppercase;
-
-    color: var(--gold-light);
-
-    margin-bottom: 20px;
-
-    font-weight: bold;
-}
-
-.hero h1 {
-    font-size: clamp(3.5rem, 10vw, 7rem);
-
-    line-height: 0.95;
-
-    letter-spacing: 6px;
-
-    color: var(--cream);
-
-    text-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.8);
-
-    margin-bottom: 25px;
-}
-
-.hero h1 span {
-    display: block;
-
-    margin-top: 20px;
-
-    font-size: clamp(1.1rem, 3vw, 1.9rem);
-
-    letter-spacing: 3px;
-
-    color: var(--silver);
-}
-
-.hero-text {
-    max-width: 680px;
-
-    margin: 0 auto 35px;
-
-    font-size: 1.15rem;
-
-    color: var(--silver);
-}
-
-.hero-buttons {
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 15px;
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-.button {
-    display: inline-block;
-
-    padding: 13px 28px;
-
-    border-radius: 2px;
-
-    font-weight: bold;
-
-    letter-spacing: 1px;
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease,
-        border 0.25s ease;
-}
-
-.button-primary {
-    background: var(--gold);
-
-    color: #090909;
-
-    border: 1px solid var(--gold);
-}
-
-.button-primary:hover {
-    background: var(--gold-light);
-
-    border-color: var(--gold-light);
-
-    transform: translateY(-2px);
-}
-
-.button-secondary {
-    border: 1px solid var(--silver-dark);
-
-    color: var(--silver);
-}
-
-.button-secondary:hover {
-    border-color: var(--gold);
-
-    color: var(--gold-light);
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   GENERAL SECTIONS
-   ========================================================= */
-
-.section {
-    padding: 90px 25px;
-
-    background: var(--cream);
-
-    color: #242424;
-}
-
-.section-dark {
-    background:
-        linear-gradient(
-            180deg,
-            #101010,
-            #171717
-        );
-
-    color: var(--silver);
-}
-
-.section-heading {
-    max-width: 850px;
-
-    margin: 0 auto 55px;
-
-    text-align: center;
-}
-
-.section-heading h2 {
-    font-size: clamp(2rem, 5vw, 3.3rem);
-
-    line-height: 1.15;
-
-    margin-bottom: 18px;
-
-    color: #181818;
-}
-
-.section-dark .section-heading h2 {
-    color: var(--cream);
-}
-
-.section-heading > p:not(.eyebrow) {
-    max-width: 700px;
-
-    margin: 15px auto 0;
-}
-
-.section-dark .section-heading > p:not(.eyebrow) {
-    color: var(--silver-dark);
-}
-
-
-/* =========================================================
-   CELTIC DIVIDER
-   ========================================================= */
-
-.celtic-divider {
-    display: inline-block;
-
-    margin-top: 5px;
-
-    color: var(--gold);
-
-    font-size: 1rem;
-
-    letter-spacing: 8px;
-}
-
-
-/* =========================================================
-   ABOUT
-   ========================================================= */
-
-.about-grid {
-    max-width: 1000px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 1.4fr 1fr;
-
-    gap: 50px;
-
-    align-items: center;
-}
-
-.about-grid h3 {
-    font-size: 1.8rem;
-
-    margin-bottom: 15px;
-
-    color: #252525;
-}
-
-.about-grid p {
-    margin-bottom: 18px;
-}
-
-.quote-card {
-    padding: 45px 35px;
-
-    text-align: center;
-
-    background: #dedbd3;
-
-    border: 1px solid #aaa59a;
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.12);
-
-    position: relative;
-}
-
-.quote-symbol {
-    font-size: 4rem;
-
-    line-height: 0.5;
-
-    color: var(--gold);
-}
-
-.quote-card p {
-    font-size: 1.7rem;
-
-    font-weight: bold;
-
-    color: #252525;
-
-    margin: 25px 0 10px;
-}
-
-.quote-card span {
-    font-size: 0.85rem;
-
-    color: #66635d;
-}
-
-
-/* =========================================================
-   LESSONS
-   ========================================================= */
-
-.schedule-grid {
-    max-width: 900px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 25px;
-}
-
-.schedule-card {
-    padding: 40px 30px;
-
-    text-align: center;
-
-    background: #1d1d1d;
-
-    border: 1px solid #444;
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.35);
-
-    transition:
-        transform 0.25s ease,
-        border 0.25s ease;
-}
-
-.schedule-card:hover {
-    transform: translateY(-5px);
-
-    border-color: var(--gold);
-}
-
-.schedule-icon {
-    font-size: 2.4rem;
-
-    margin-bottom: 12px;
-}
-
-.schedule-card h3 {
-    color: var(--gold-light);
-
-    font-size: 1.6rem;
-
-    margin-bottom: 15px;
-}
-
-.schedule-card .time {
-    color: var(--silver);
-
-    margin-bottom: 15px;
-}
-
-.schedule-card .time strong {
-    color: var(--cream);
-}
-
-
-/* =========================================================
-   MUSICIAN'S TOOLKIT
-   ========================================================= */
-
-.toolkit-grid {
-    max-width: 900px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 25px;
-}
-
-.tool-card {
-    display: block;
-
-    padding: 35px;
-
-    background: #dedbd3;
-
-    border: 1px solid #aaa59a;
-
-    transition:
-        transform 0.25s ease,
-        border 0.25s ease,
-        background 0.25s ease;
-}
-
-.tool-card:hover {
-    transform: translateY(-5px);
-
-    border-color: var(--gold);
-
-    background: #e8e5de;
-}
-
-.tool-icon {
-    font-size: 2.4rem;
-
-    display: block;
-
-    margin-bottom: 10px;
-}
-
-.tool-card h3 {
-    font-size: 1.5rem;
-
-    color: #242424;
-
-    margin-bottom: 10px;
-}
-
-.tool-card p {
-    margin-bottom: 15px;
-
-    color: #4d4b47;
-}
-
-.tool-link {
-    color: #75602f;
-
-    font-weight: bold;
-}
-
-
-/* =========================================================
-   GALLERY
-   ========================================================= */
-
-.empty-gallery {
-    max-width: 650px;
-
-    margin: auto;
-
-    padding: 70px 30px;
-
-    text-align: center;
-
-    background: #1d1d1d;
-
-    border: 1px dashed #70664f;
-}
-
-.gallery-symbol {
-    font-size: 3rem;
-
-    margin-bottom: 15px;
-}
-
-.empty-gallery h3 {
-    color: var(--gold-light);
-
-    margin-bottom: 10px;
-}
-
-.empty-gallery p {
     max-width: 500px;
-
-    margin: auto;
-
-    color: var(--silver-dark);
 }
 
 
-/* =========================================================
-   FAQ
-   ========================================================= */
-
-.faq-list {
-    max-width: 850px;
-
-    margin: auto;
-}
-
-.faq-list details {
-    border-bottom: 1px solid #bbb6ab;
-
-    padding: 20px 5px;
-}
-
-.faq-list summary {
-    cursor: pointer;
-
-    font-size: 1.15rem;
-
-    font-weight: bold;
-
-    color: #292929;
-}
-
-.faq-list details p {
-    padding: 15px 25px 5px 0;
-
-    color: #55524c;
-}
-
-
-/* =========================================================
-   JOIN SECTION
-   ========================================================= */
-
-.join-section {
-    background:
-        radial-gradient(
-            circle at center,
-            #292929,
-            #0b0b0b 75%
-        );
-
-    color: var(--cream);
-
-    text-align: center;
-}
-
-.join-content {
-    max-width: 750px;
-
-    margin: auto;
-}
-
-.join-content h2 {
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-
-    margin-bottom: 15px;
-}
-
-.join-content > p:not(.eyebrow) {
-    max-width: 650px;
-
-    margin: 15px auto;
-
-    color: var(--silver);
-}
-
-
-/* =========================================================
-   JIMG3 CONNECTION
-   ========================================================= */
-
-.jimg3-link {
-    padding: 45px 25px;
-
-    text-align: center;
-
-    background: #181818;
-
-    color: var(--silver);
-
-    border-top: 1px solid #333;
-
-    border-bottom: 1px solid #333;
-}
-
-.jimg3-link p {
-    margin-bottom: 8px;
-
-    color: var(--silver-dark);
-}
-
-.jimg3-link a {
-    font-size: 1.3rem;
-
-    font-weight: bold;
-
-    color: var(--gold-light);
-
-    transition: color 0.25s ease;
-}
-
-.jimg3-link a:hover {
-    color: #eee0b3;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.site-footer {
-    background: #050505;
-
-    color: var(--silver-dark);
-
-    padding: 45px 25px 20px;
-}
-
-.footer-inner {
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 30px;
-}
-
-.footer-inner h3 {
-    color: var(--cream);
-
-    margin-bottom: 5px;
-}
-
-.footer-links {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 18px;
-
-    align-items: center;
-}
-
-.footer-links a:hover {
-    color: var(--gold-light);
-}
-
-.footer-bottom {
-    max-width: 1100px;
-
-    margin: 35px auto 0;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #292929;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    font-size: 0.85rem;
-}
-
+.footer-links a,
 .footer-bottom a {
-    color: var(--gold);
-}
-
-
-/* =========================================================
-   MOBILE / TABLET
-   ========================================================= */
-
-@media (max-width: 850px) {
-
-    .header-inner {
-        flex-direction: column;
-    }
-
-    .main-nav {
-        justify-content: center;
-
-        gap: 8px 15px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .schedule-grid,
-    .toolkit-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 550px) {
-
-    .site-header {
-        position: relative;
-    }
-
-    .header-inner {
-        padding: 15px;
-    }
-
-    .logo {
-        white-space: normal;
-
-        text-align: center;
-    }
-
-    .main-nav {
-        gap: 5px 12px;
-    }
-
-    .main-nav a {
-        font-size: 0.8rem;
-    }
-
-    .hero {
-        min-height: 75vh;
-
-        padding: 70px 20px;
-    }
-
-    .hero h1 {
-        font-size: 3.4rem;
-
-        letter-spacing: 3px;
-    }
-
-    .hero h1 span {
-        font-size: 1.05rem;
-
-        letter-spacing: 2px;
-    }
-
-    .section {
-        padding: 65px 20px;
-    }
-
-    .schedule-card,
-    .tool-card {
-        padding: 30px 22px;
-    }
-
-    .footer-inner,
-    .footer-bottom {
-        flex-direction: column;
-
-        text-align: center;
-
-        align-items: center;
-/* =====================================================
-   MUSICIAN'S TOOLBOX
-   ===================================================== */
-
-.toolbox-grid {
-    width: min(1100px, 92%);
-    margin: 35px auto 0;
-
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(240px, 1fr));
-
-    gap: 22px;
-}
-
-
-.toolbox-card {
-    position: relative;
-
-    padding: 28px 22px;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(35, 35, 35, 0.98),
-            rgba(15, 15, 15, 0.98)
-        );
-
-    border: 1px solid #3c3c3c;
-
-    border-radius: 14px;
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.35);
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-
-.toolbox-card:hover {
-    transform: translateY(-5px);
-
-    border-color: #a58b55;
-
-    box-shadow:
-        0 14px 30px rgba(0, 0, 0, 0.5);
-}
-
-
-.toolbox-featured {
-    border: 2px solid #8f7746;
-
-    background:
-        linear-gradient(
-            145deg,
-            #24221d,
-            #11100e
-        );
-}
-
-
-.toolbox-icon {
-    font-size: 2.8rem;
-
-    margin-bottom: 12px;
-}
-
-
-.toolbox-card h3 {
-    margin: 8px 0 12px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 1.4rem;
-
-    color: #e3cc95;
-}
-
-
-.toolbox-card p {
-    margin: 0 auto 20px;
-
-    max-width: 320px;
-
-    min-height: 60px;
-
-    color: #bdbdbd;
-
-    line-height: 1.6;
-
-    font-size: 0.98rem;
-}
-
-
-.toolbox-card .button {
-    display: inline-block;
-
-    margin-top: 5px;
-}
-
-
-/* =====================================================
-   COMING SOON TOOLS
-   ===================================================== */
-
-.toolbox-coming-soon {
-    opacity: 0.72;
-}
-
-
-.toolbox-coming-soon:hover {
-    opacity: 0.9;
-}
-
-
-.tool-coming {
-    display: inline-block;
-
-    margin-top: 5px;
-
-    padding: 7px 13px;
-
-    border: 1px solid #555;
-
-    border-radius: 6px;
 
     color: #999;
 
-    font-size: 0.75rem;
-
-    font-weight: bold;
-
-    letter-spacing: 1px;
-}
-
-
-/* =====================================================
-   TOOLBOX SECTION INTRO
-   ===================================================== */
-
-#toolbox .section-heading > p:last-child {
-    max-width: 650px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    color: #aaa;
-
-    line-height: 1.6;
-}
-
-
-/* =====================================================
-   MOBILE TOOLBOX
-   ===================================================== */
-
-@media (max-width: 600px) {
-
-    .toolbox-grid {
-        width: 94%;
-
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-
-    .toolbox-card {
-        padding: 25px 18px;
-    }
-
-
-    .toolbox-card h3 {
-        font-size: 1.3rem;
-    }
-
-
-    .toolbox-icon {
-        font-size: 2.5rem;
-    }
-
-}    }
-}
-/* =====================================================
-   MUSICIAN'S TOOLBOX
-   ===================================================== */
-.toolbox-grid {
-    width: min(900px, 94%);
-    margin: 25px auto 0;
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(185px, 1fr));
-    gap: 12px;
-}
-/* =====================================================
-   TOOL CARDS
-   ===================================================== */
-.toolbox-card {
-    padding: 17px 13px;
-    text-align: center;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(35, 35, 35, 0.98),
-            rgba(15, 15, 15, 0.98)
-        );
-    border: 1px solid #383838;
-    border-radius: 10px;
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.3);
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
-.toolbox-card:hover {
-    transform: translateY(-3px);
-    border-color: #a58b55;
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.4);
-}
-/* =====================================================
-   ML6CMG FEATURED TOOL
-   ===================================================== */
-.toolbox-featured {
-    border: 2px solid #8f7746;
-    background:
-        linear-gradient(
-            145deg,
-            #24221d,
-            #11100e
-        );
-}
-/* =====================================================
-   ICON
-   ===================================================== */
-.toolbox-icon {
-    font-size: 1.8rem;
-    margin-bottom: 6px;
-}
-/* =====================================================
-   TITLE
-   ===================================================== */
-.toolbox-card h3 {
-    margin: 4px 0 7px;
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-    font-size: 1.08rem;
-    color: #e3cc95;
-}
-/* =====================================================
-   DESCRIPTION
-   ===================================================== */
-.toolbox-card p {
-    margin: 0 auto 12px;
-    min-height: 42px;
-    color: #aaa;
-    line-height: 1.35;
-    font-size: 0.82rem;
-}
-/* =====================================================
-   TOOL BUTTONS
-   ===================================================== */
-.toolbox-card .button {
-    display: inline-block;
-    padding: 8px 12px;
-    font-size: 0.78rem;
     text-decoration: none;
 }
-/* =====================================================
-   TOOLBOX HEADING
-   ===================================================== */
-#toolbox .section-heading > p:last-child {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #aaa;
-    line-height: 1.6;
+
+
+.footer-links a:hover,
+.footer-bottom a:hover {
+
+    color: #d8c08a;
 }
+
+
+.footer-bottom {
+
+    width: min(1100px, 94%);
+
+    margin:
+        25px auto 0;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid #242424;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    text-align: center;
+
+    font-size: 0.82rem;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 850px) {
+
+    .main-nav {
+
+        justify-content: center;
+    }
+
+
+    .header-inner {
+
+        flex-direction: column;
+
+        padding: 12px 0;
+    }
+
+
+    .instrument-columns {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .footer-links {
+
+        justify-content: center;
+
+        max-width: none;
+    }
+
+}
+
+
 /* =====================================================
    MOBILE
    ===================================================== */
+
 @media (max-width: 600px) {
+
+    .age-notice {
+
+        flex-direction: column;
+
+        gap: 2px;
+    }
+
+
+    .main-nav {
+
+        gap: 8px 12px;
+    }
+
+
+    .main-nav a {
+
+        font-size: 0.75rem;
+    }
+
+
+    .hero {
+
+        min-height: 80vh;
+
+        padding:
+            45px 15px;
+    }
+
+
+    .section {
+
+        padding:
+            55px 15px;
+    }
+
+
+    .instrument-columns {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .two-column {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Compact toolbox on phones */
+
     .toolbox-grid {
+
         width: 94%;
+
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+
         gap: 9px;
     }
+
+
     .toolbox-card {
-        padding: 14px 9px;
+
+        padding:
+            14px 9px;
     }
+
+
     .toolbox-icon {
+
         font-size: 1.6rem;
     }
+
+
     .toolbox-card h3 {
+
         font-size: 0.95rem;
     }
+
+
     .toolbox-card p {
+
         font-size: 0.75rem;
+
         min-height: 50px;
     }
+
+
     .toolbox-card .button {
-        padding: 7px 8px;
+
+        padding:
+            7px 8px;
+
         font-size: 0.7rem;
     }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
 }
