@@ -19,6 +19,71 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <style>
+
+        /* =====================================================
+           EMBEDDED ML6CMG CHORD FINDER
+           ===================================================== */
+
+        .toolbox-chord-finder {
+            grid-column: 1 / -1;
+            width: 100%;
+        }
+
+        .chord-finder-embed {
+            width: 100%;
+            height: 850px;
+            margin: 20px 0;
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 14px;
+            overflow: hidden;
+            background: #101010;
+            box-shadow:
+                0 10px 30px rgba(0,0,0,.35);
+        }
+
+        .chord-finder-embed iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: #101010;
+        }
+
+
+        /* =====================================================
+           TABLET
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .chord-finder-embed {
+                height: 800px;
+            }
+
+        }
+
+
+        /* =====================================================
+           PHONE
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .toolbox-chord-finder {
+                padding: 14px;
+            }
+
+            .chord-finder-embed {
+                height: 760px;
+                margin: 15px 0;
+                border-radius: 10px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
@@ -594,23 +659,34 @@
 
 
         <!-- =================================================
-             ML6CMG APP
+             ML6CMG CHORD FINDER — EMBEDDED
              ================================================= -->
 
-        <div class="toolbox-card toolbox-featured">
+        <div class="toolbox-card toolbox-chord-finder">
 
             <div class="toolbox-icon">
-                🎵
+                🎸
             </div>
 
             <h3>
-                ML6CMG APP
+                ML6CMG Chord Finder
             </h3>
 
             <p>
-                Our own music learning and playing app
-                for ML6 Community Music Group.
+                Build chords, arrange lyrics, create
+                chord progressions and work on your songs.
             </p>
+
+            <div class="chord-finder-embed">
+
+                <iframe
+                    src="https://jimg3-music.github.io/ML6CMG.APP/"
+                    title="ML6CMG Chord Finder"
+                    loading="lazy"
+                    allow="microphone"
+                ></iframe>
+
+            </div>
 
             <a
                 href="https://jimg3-music.github.io/ML6CMG.APP/"
@@ -618,7 +694,7 @@
                 rel="noopener noreferrer"
                 class="button button-primary"
             >
-                Open ML6CMG APP
+                Open Chord Finder Full Screen
             </a>
 
         </div>
@@ -776,33 +852,6 @@
             >
                 Open Scales
             </a>
-
-        </div>
-
-
-
-        <!-- =================================================
-             CHORD FINDER — COMING SOON
-             ================================================= -->
-
-        <div class="toolbox-card toolbox-coming-soon">
-
-            <div class="toolbox-icon">
-                🎸
-            </div>
-
-            <h3>
-                Chord Finder
-            </h3>
-
-            <p>
-                Our own chord finder is being developed
-                for ML6 Community Music Group.
-            </p>
-
-            <span class="tool-coming">
-                COMING SOON
-            </span>
 
         </div>
 
